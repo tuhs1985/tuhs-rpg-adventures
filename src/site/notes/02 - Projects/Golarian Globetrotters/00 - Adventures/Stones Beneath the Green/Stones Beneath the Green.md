@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/00-adventures/stones-beneath-the-green/stones-beneath-the-green/","tags":["adventure"]}
+{"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/00-adventures/stones-beneath-the-green/stones-beneath-the-green/","tags":["adventure"],"dgShowToc":true}
 ---
 
 

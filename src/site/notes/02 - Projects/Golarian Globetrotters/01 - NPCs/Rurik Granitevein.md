@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/01-np-cs/rurik-granitevein/","tags":["npc"]}
+{"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/01-np-cs/rurik-granitevein/","tags":["npc"],"dgShowToc":true}
 ---
 
 

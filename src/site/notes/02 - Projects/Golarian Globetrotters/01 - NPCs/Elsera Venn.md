@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/01-np-cs/elsera-venn/","tags":["npc"]}
+{"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/01-np-cs/elsera-venn/","tags":["npc"],"dgShowToc":true}
 ---
 
 
