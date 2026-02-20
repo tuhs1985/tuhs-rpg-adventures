@@ -42,4 +42,4 @@ If new oil leaks from barrels, the hazard reforms in 10 minutes.
 **Notes**  
 - Treat each patch as a 5-foot hazard space; 4–6 patches typically cover the causeway.  
 
-
+```

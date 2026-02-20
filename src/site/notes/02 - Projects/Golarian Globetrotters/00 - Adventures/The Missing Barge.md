@@ -48,7 +48,7 @@ This short adventure spans the river route between **Riverspire** and **Lasinave
 - **Failure:** Raiders escape with cargo or captives, creating hooks for a follow-up mission.
 
 ---
-
+```
 
 
 <div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/02-projects/golarian-globetrotters/05-encounter-library/river-trail-ambush/" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
@@ -95,7 +95,7 @@ As the group approaches the fallen tree, movement in the reeds reveals an ambush
 
 **Victory Conditions**  
 - Ambushers routed or captured; clues on the bodies point upriver to the wreck site.  
-
+```
 
 
 </div></div>
@@ -163,7 +163,7 @@ The challenge ends when either threshold is reached.
 - **Success (8 VP before 3 Collapse Points):** The barge is secured and partially unloaded. The party earns full 80 XP.  
 - **Partial Success (≥4 VP but 3 Collapse Points reached):** Half the cargo is lost; full XP awarded but reduced gold payout per GM discretion.  
 - **Failure (<4 VP when 3 Collapse Points reached):** The barge breaks free and drifts away; party earns half XP (40).
-
+```
 
 
 </div></div>
@@ -227,7 +227,7 @@ Three surviving **Riverspire deckhands**—bruised and bound—are forced to ass
 - **Victory:** Crew rescued, raiders defeated, cargo secured. The party earns full 80 XP.  
 - **Partial:** Cargo burns; full XP, Gold reward reduced by half.  
 - **Failure:** Raiders escape with captives; half XP (40).
-
+```
 
 **Hazard**
 
@@ -276,7 +276,7 @@ If new oil leaks from barrels, the hazard reforms in 10 minutes.
 **Notes**  
 - Treat each patch as a 5-foot hazard space; 4–6 patches typically cover the causeway.  
 
-
+```
 
 
 </div></div>

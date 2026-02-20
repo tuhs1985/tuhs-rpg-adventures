@@ -59,4 +59,4 @@ The challenge ends when either threshold is reached.
 - **Success (8 VP before 3 Collapse Points):** The barge is secured and partially unloaded. The party earns full 80 XP.  
 - **Partial Success (≥4 VP but 3 Collapse Points reached):** Half the cargo is lost; full XP awarded but reduced gold payout per GM discretion.  
 - **Failure (<4 VP when 3 Collapse Points reached):** The barge breaks free and drifts away; party earns half XP (40).
-
+```

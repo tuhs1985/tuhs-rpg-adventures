@@ -75,7 +75,7 @@ The mine was left idle years ago for reasons that were never properly documented
 - Regional Random Encounter DC adjustments for future sessions.
 - Establishes site as a future expedition hub.
 - Introduces the Fey as an active, remembering force in the campaign.
-
+```
 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 

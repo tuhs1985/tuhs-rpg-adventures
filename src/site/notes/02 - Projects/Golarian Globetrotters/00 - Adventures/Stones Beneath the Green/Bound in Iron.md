@@ -67,7 +67,7 @@ After crews are sent to begin reclaiming the abandoned mine, disturbances escala
 - Payment reduced if 2+ workers die.  
 - The ward disturbs something beneath the mine.  
 - Session 3: Reports of underground instability and renewed danger.
-
+```
 
   
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
