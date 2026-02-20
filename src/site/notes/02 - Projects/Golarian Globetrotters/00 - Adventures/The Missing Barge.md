@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/00-adventures/the-missing-barge/","tags":["adventure"]}
 ---
 
-```pf2e-stats
+
 # The Missing Barge
 ## Adventure Overview
 ==Adventure== ==Level 1== ==Kyonin River== 
@@ -12,7 +12,7 @@
 
 **Scenario**  
 As autumn sets in across Kyonin, the river runs high from seasonal rains, its waters cold and fast beneath fading leaves. A Riverspire trade barge bound for Lasinavel vanished after the most recent storm, leaving dockworkers whispering about raiders and wreckage seen upriver.  
-The dockmaster, **[[Elsera Venn]]**, now seeks capable hands to recover the missing cargo before Lasinavel’s merchant guild imposes costly fines. Rumors from river scouts speak of strange shapes moving near the old elven causeway—perhaps scavengers drawn by the wreck, or something more deliberate.
+The dockmaster, **[[02 - Projects/Golarian Globetrotters/01 - NPCs/Elsera Venn\|Elsera Venn]]**, now seeks capable hands to recover the missing cargo before Lasinavel’s merchant guild imposes costly fines. Rumors from river scouts speak of strange shapes moving near the old elven causeway—perhaps scavengers drawn by the wreck, or something more deliberate.
 
 This short adventure spans the river route between **Riverspire** and **Lasinavel**, divided into three connected scenes:  
 1. **River Trail Ambush** — Combat encounter (Moderate 80 XP)  
@@ -48,7 +48,7 @@ This short adventure spans the river route between **Riverspire** and **Lasinave
 - **Failure:** Raiders escape with cargo or captives, creating hooks for a follow-up mission.
 
 ---
-```
+
 
 
 <div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/02-projects/golarian-globetrotters/05-encounter-library/river-trail-ambush/" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
@@ -56,7 +56,7 @@ This short adventure spans the river route between **Riverspire** and **Lasinave
 
 
 
-```pf2e-stats
+
 # River Trail Ambush
 ## Encounter 1 (Moderate)
 
@@ -95,7 +95,7 @@ As the group approaches the fallen tree, movement in the reeds reveals an ambush
 
 **Victory Conditions**  
 - Ambushers routed or captured; clues on the bodies point upriver to the wreck site.  
-```
+
 
 
 </div></div>
@@ -106,7 +106,7 @@ As the group approaches the fallen tree, movement in the reeds reveals an ambush
 
 
 
-```pf2e-stats
+
 # Wrecked Barge Stabilization
 ## Victory Point Subsystem (Moderate)
 
@@ -163,7 +163,7 @@ The challenge ends when either threshold is reached.
 - **Success (8 VP before 3 Collapse Points):** The barge is secured and partially unloaded. The party earns full 80 XP.  
 - **Partial Success (≥4 VP but 3 Collapse Points reached):** Half the cargo is lost; full XP awarded but reduced gold payout per GM discretion.  
 - **Failure (<4 VP when 3 Collapse Points reached):** The barge breaks free and drifts away; party earns half XP (40).
-```
+
 
 
 </div></div>
@@ -174,7 +174,7 @@ The challenge ends when either threshold is reached.
 
 
 
-```pf2e-stats
+
 # Causeway Standoff
 ## Encounter 2 (Moderate)
 
@@ -227,7 +227,7 @@ Three surviving **Riverspire deckhands**—bruised and bound—are forced to ass
 - **Victory:** Crew rescued, raiders defeated, cargo secured. The party earns full 80 XP.  
 - **Partial:** Cargo burns; full XP, Gold reward reduced by half.  
 - **Failure:** Raiders escape with captives; half XP (40).
-```
+
 
 **Hazard**
 
@@ -236,7 +236,7 @@ Three surviving **Riverspire deckhands**—bruised and bound—are forced to ass
 
 
 
-```pf2e-stats
+
 # Oil Fire Slick
 ## Complex Hazard -1
 
@@ -276,7 +276,7 @@ If new oil leaks from barrels, the hazard reforms in 10 minutes.
 **Notes**  
 - Treat each patch as a 5-foot hazard space; 4–6 patches typically cover the causeway.  
 
-```
+
 
 
 </div></div>
