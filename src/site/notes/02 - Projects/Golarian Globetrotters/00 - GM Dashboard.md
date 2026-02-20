@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/00-gm-dashboard/"}
+{"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/00-gm-dashboard/","tags":["gardenEntry"]}
 ---
 
 ## 1. Adventures
