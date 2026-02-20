@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/05-encounter-library/causeway-standoff/","tags":["encounter"]}
 ---
 
-
+```pf2e-stats
 # Causeway Standoff
 ## Encounter 2 (Moderate)
 
@@ -64,7 +64,7 @@ Three surviving **Riverspire deckhands**—bruised and bound—are forced to ass
 
 
 
-
+```pf2e-stats
 # Oil Fire Slick
 ## Complex Hazard -1
 

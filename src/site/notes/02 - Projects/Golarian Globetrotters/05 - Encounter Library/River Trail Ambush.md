@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/05-encounter-library/river-trail-ambush/","tags":["encounter"]}
 ---
 
-
+```pf2e-stats
 # River Trail Ambush
 ## Encounter 1 (Moderate)
 

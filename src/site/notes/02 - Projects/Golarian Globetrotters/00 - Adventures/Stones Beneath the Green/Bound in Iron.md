@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/00-adventures/stones-beneath-the-green/bound-in-iron/","tags":["adventure"]}
 ---
 
-
+```pf2e-stats
 # Bound in Iron
 ## Adventure Overview
 ==Adventure== ==Level 1== ==Kyonin Boarderlands==
@@ -75,7 +75,7 @@ After crews are sent to begin reclaiming the abandoned mine, disturbances escala
 
 
 
-
+```pf2e-stats
 # Warning from the Green
 ## Encounter 2 (Severe)
 
@@ -182,7 +182,7 @@ Workers flee. Equipment damaged. Mine entrance temporarily unsafe.
 
 
 
-
+```pf2e-stats
 # Warding the Claim
 ## Victory Point Subsystem (Moderate)
 

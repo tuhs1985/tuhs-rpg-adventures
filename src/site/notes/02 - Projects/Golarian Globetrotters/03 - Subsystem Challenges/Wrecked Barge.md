@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/03-subsystem-challenges/wrecked-barge/","tags":["subsystem"]}
 ---
 
-
+```pf2e-stats
 # Wrecked Barge Stabilization
 ## Victory Point Subsystem (Moderate)
 

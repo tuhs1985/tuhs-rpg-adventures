@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/04-hazards/oil-fire-slick/","tags":["hazard"]}
 ---
 
-
+```pf2e-stats
 # Oil Fire Slick
 ## Complex Hazard -1
 

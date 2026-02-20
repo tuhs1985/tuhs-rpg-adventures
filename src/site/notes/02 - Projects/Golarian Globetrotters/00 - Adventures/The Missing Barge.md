@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/00-adventures/the-missing-barge/","tags":["adventure"]}
 ---
 
-
+```pf2e-stats
 # The Missing Barge
 ## Adventure Overview
 ==Adventure== ==Level 1== ==Kyonin River== 
@@ -12,7 +12,7 @@
 
 **Scenario**  
 As autumn sets in across Kyonin, the river runs high from seasonal rains, its waters cold and fast beneath fading leaves. A Riverspire trade barge bound for Lasinavel vanished after the most recent storm, leaving dockworkers whispering about raiders and wreckage seen upriver.  
-The dockmaster, **[[02 - Projects/Golarian Globetrotters/01 - NPCs/Elsera Venn\|Elsera Venn]]**, now seeks capable hands to recover the missing cargo before Lasinavel’s merchant guild imposes costly fines. Rumors from river scouts speak of strange shapes moving near the old elven causeway—perhaps scavengers drawn by the wreck, or something more deliberate.
+The dockmaster, **[[Elsera Venn]]**, now seeks capable hands to recover the missing cargo before Lasinavel’s merchant guild imposes costly fines. Rumors from river scouts speak of strange shapes moving near the old elven causeway—perhaps scavengers drawn by the wreck, or something more deliberate.
 
 This short adventure spans the river route between **Riverspire** and **Lasinavel**, divided into three connected scenes:  
 1. **River Trail Ambush** — Combat encounter (Moderate 80 XP)  
@@ -56,7 +56,7 @@ This short adventure spans the river route between **Riverspire** and **Lasinave
 
 
 
-
+```pf2e-stats
 # River Trail Ambush
 ## Encounter 1 (Moderate)
 
@@ -106,7 +106,7 @@ As the group approaches the fallen tree, movement in the reeds reveals an ambush
 
 
 
-
+```pf2e-stats
 # Wrecked Barge Stabilization
 ## Victory Point Subsystem (Moderate)
 
@@ -174,7 +174,7 @@ The challenge ends when either threshold is reached.
 
 
 
-
+```pf2e-stats
 # Causeway Standoff
 ## Encounter 2 (Moderate)
 
@@ -236,7 +236,7 @@ Three surviving **Riverspire deckhands**—bruised and bound—are forced to ass
 
 
 
-
+```pf2e-stats
 # Oil Fire Slick
 ## Complex Hazard -1
 
