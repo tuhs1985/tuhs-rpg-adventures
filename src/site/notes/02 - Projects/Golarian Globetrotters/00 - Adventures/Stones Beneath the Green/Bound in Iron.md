@@ -38,7 +38,7 @@ After crews are sent to begin reclaiming the abandoned mine, disturbances escala
 ---
 
 **Notable NPCs**
-- **Rurik Granitevein** — Patron; pressing for stability and continued operation.  
+- **[[02 - Projects/Golarian Globetrotters/01 - NPCs/Rurik Granitevein\|Rurik Granitevein]]** — Patron; pressing for stability and continued operation.  
 - **Mine Foreman (TBD)** — Represents worker morale and practical concerns. 
 
 ---
