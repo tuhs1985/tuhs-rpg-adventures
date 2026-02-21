@@ -3,7 +3,7 @@
 ---
 
 
-pf2e-stats
+```pf2e-stats
 # Camp Preparation — Site Defense Readiness
 ## Short Subsystem
 

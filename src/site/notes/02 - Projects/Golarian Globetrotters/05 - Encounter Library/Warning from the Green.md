@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/05-encounter-library/warning-from-the-green/","tags":["encounter"]}
 ---
 
-pf2e-stats
+```pf2e-stats
 # Warning from the Green
 ## Encounter 2 (Severe)
 

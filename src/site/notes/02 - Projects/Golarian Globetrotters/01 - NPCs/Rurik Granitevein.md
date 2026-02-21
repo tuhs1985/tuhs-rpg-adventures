@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/01-np-cs/rurik-granitevein/","tags":["npc"]}
 ---
 
-pf2e-stats
+```pf2e-stats
 # Rurik Granitevein
 ## Creature 1 (Prospector 3)
 
