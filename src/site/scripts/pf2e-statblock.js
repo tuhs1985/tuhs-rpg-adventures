@@ -33,7 +33,11 @@
       const targetTitle = pathPart.split("/").pop().trim(); // title is what DG link text usually is
 
       // Prefer DG’s real link if we can find it
-      let href = linkMap?.get(targetTitle) || linkMap?.get(display);
+const key1 = targetTitle.trim();
+const key2 = display.trim();
+const key3 = slugifyForDG(targetTitle); // in case map stored slug keys
+
+let href = linkMap?.get(key1) || linkMap?.get(key2) || linkMap?.get(key3);
 
       // If not found, fall back to a conservative guess (flat) rather than broken folders
       if (!href) {
@@ -58,21 +62,41 @@
   }
   
     // Build a map: "Note Title" -> "/real/path/"
-  function buildInternalLinkMap() {
-    const map = new Map();
+function normalizeTitle(s) {
+  return (s || "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
-    // Digital Garden uses internal-link class; also capture any anchor with /.../ hrefs
-    document.querySelectorAll('a.internal-link[href]').forEach(a => {
-      const text = (a.textContent || "").trim();
-      const href = a.getAttribute("href");
-      if (!text || !href) return;
+function buildInternalLinkMap() {
+  const map = new Map();
 
-      // Keep first seen to avoid accidental overwrites
-      if (!map.has(text)) map.set(text, href);
+  document.querySelectorAll('a.internal-link[href]').forEach(a => {
+    const href = a.getAttribute("href");
+    if (!href) return;
+
+    // Prefer the title from Obsidian/DG attributes when present
+    const dataHref = a.getAttribute("data-href");      // sometimes exists
+    const aria = a.getAttribute("aria-label");         // sometimes exists
+    const titleAttr = a.getAttribute("title");         // sometimes exists
+    const text = normalizeTitle(a.textContent);
+
+    // Store multiple keys that might match what the wikilink contains
+    const candidates = [dataHref, aria, titleAttr, text]
+      .filter(Boolean)
+      .map(normalizeTitle);
+
+    candidates.forEach(k => {
+      if (!map.has(k)) map.set(k, href);
     });
 
-    return map;
-  }
+    // Also store the last path segment of the href itself as a key, e.g. "rurik-granitevein"
+    const m = href.match(/\/([^\/#]+)\/?$/);
+    if (m && m[1] && !map.has(m[1])) map.set(m[1], href);
+  });
+
+  return map;
+}
 
   const TRAIT_CLASS = new Map([
     ["tiny", "pf2e-statblock-trait-size"],
@@ -147,6 +171,9 @@
       if (isPF2E) transformStatblockCodeBlock(code, false);
       if (isSF2E) transformStatblockCodeBlock(code, true);
     });
+	console.log("DG link map sample keys:", Array.from(window.__dgLinkMap.keys()).slice(0, 25));
+console.log("DG link map for 'Rurik Granitevein':", window.__dgLinkMap.get("Rurik Granitevein"));
+console.log("DG link map for 'rurik-granitevein':", window.__dgLinkMap.get("rurik-granitevein"));
   }
 
   if (document.readyState === "loading") {
