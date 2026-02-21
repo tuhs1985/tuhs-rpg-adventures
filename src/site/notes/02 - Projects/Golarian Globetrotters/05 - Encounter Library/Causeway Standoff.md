@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/05-encounter-library/causeway-standoff/","tags":["encounter"]}
 ---
 
-
+```pf2e-stats
 # Causeway Standoff
 ## Encounter 2 (Moderate)
 
@@ -55,7 +55,7 @@ Three surviving **Riverspire deckhands**—bruised and bound—are forced to ass
 - **Victory:** Crew rescued, raiders defeated, cargo secured. The party earns full 80 XP.  
 - **Partial:** Cargo burns; full XP, Gold reward reduced by half.  
 - **Failure:** Raiders escape with captives; half XP (40).
-
+```
 
 **Hazard**
 
@@ -64,7 +64,7 @@ Three surviving **Riverspire deckhands**—bruised and bound—are forced to ass
 
 
 
-
+```pf2e-stats
 # Oil Fire Slick
 ## Complex Hazard -1
 
@@ -104,7 +104,7 @@ If new oil leaks from barrels, the hazard reforms in 10 minutes.
 **Notes**  
 - Treat each patch as a 5-foot hazard space; 4–6 patches typically cover the causeway.  
 
-
+```
 
 
 </div></div>
