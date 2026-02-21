@@ -75,6 +75,8 @@ The mine was left idle years ago for reasons that were never properly documented
 - Regional Random Encounter DC adjustments for future sessions.
 - Establishes site as a future expedition hub.
 - Introduces the Fey as an active, remembering force in the campaign.
+
+---
 ```
 
 <div class="transclusion internal-embed is-loaded"><a class="markdown-embed-link" href="/02-projects/golarian-globetrotters/03-subsystem-challenges/assess-the-claim/" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a><div class="markdown-embed">
@@ -169,6 +171,9 @@ After four assessment passes (8 hours total), total the Victory Points:
   - The assessment is inconclusive or troubling, yet the prospector may still push ahead out of stubbornness or sunk cost.  
   - **Payout:** Half reward, 9 gp total, paid grudgingly.  
   - **Future Random Encounters:** The region is now volatile and hazardous; **Random Encounter flat check DC becomes 10** (encounters significantly more likely).
+
+---
+```
 
 
 </div></div>
@@ -292,6 +297,9 @@ If a **night encounter occurs at this camp**, apply:
 
 These effects apply only to the **next night encounter at this camp** and do not persist beyond it.
 
+---
+```
+
 
 </div></div>
 
@@ -368,5 +376,8 @@ The wolves stalk first and strike when they think they have advantage.
 **Environmental Variant:**  
 - Rain or slick stone increases footing difficulty  
   - Acrobatics DCs **+2** when moving quickly
+
+---
+```
 
 </div></div>

@@ -98,3 +98,6 @@ Workers flee. Equipment damaged. Mine entrance temporarily unsafe.
   
 **Environmental Variant:**  
 - A worker is grabbed or cornered at the start; rescuing them becomes an immediate objective
+
+---
+```

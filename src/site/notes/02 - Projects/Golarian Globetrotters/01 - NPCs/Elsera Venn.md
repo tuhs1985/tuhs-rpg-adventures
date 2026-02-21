@@ -101,3 +101,6 @@ Elsera avoids fights entirely—she calls for help or retreats toward guards rat
 - Additional river-related work: escorting barges, locating missing crews, addressing towpath threats.  
 - Updates on shifting trade patterns or political pressure from Lasinavel.  
 - A growing sense of trust—she may eventually share concerns about strange river activity or ask for help with matters she can’t address publicly.
+
+---
+```

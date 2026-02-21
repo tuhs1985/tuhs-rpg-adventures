@@ -85,3 +85,6 @@ If a full round passes with no ritual check:
 - **0–2 VP:** Ward stands; noticeable tremor from deeper stone  
   
 The ward holds in all cases.
+
+---
+```

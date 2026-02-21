@@ -38,7 +38,7 @@ After crews are sent to begin reclaiming the abandoned mine, disturbances escala
 ---
 
 **Notable NPCs**
-- **[[Rurik Granitevein]]** — Patron; pressing for stability and continued operation.  
+- [[Rurik Granitevein]] — Patron; pressing for stability and continued operation.  
 - **Mine Foreman (TBD)** — Represents worker morale and practical concerns. 
 
 ---
@@ -67,6 +67,8 @@ After crews are sent to begin reclaiming the abandoned mine, disturbances escala
 - Payment reduced if 2+ workers die.  
 - The ward disturbs something beneath the mine.  
 - Session 3: Reports of underground instability and renewed danger.
+
+---  
 ```
 
   
@@ -172,6 +174,9 @@ Workers flee. Equipment damaged. Mine entrance temporarily unsafe.
 **Environmental Variant:**  
 - A worker is grabbed or cornered at the start; rescuing them becomes an immediate objective
 
+---
+```
+
 
 </div></div>
 
@@ -264,6 +269,9 @@ If a full round passes with no ritual check:
 - **0–2 VP:** Ward stands; noticeable tremor from deeper stone  
   
 The ward holds in all cases.
+
+---
+```
 
 
 </div></div>

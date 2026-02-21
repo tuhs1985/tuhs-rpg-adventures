@@ -106,3 +106,6 @@ Rurik avoids fights whenever possible. If forced, he stays behind tougher allies
 - Continued contracts and paid expeditions.  
 - Pressure to reinterpret or “clarify” dangerous findings.  
 - Potential future antagonist if his ambitions outpace the party’s willingness to enable them.
+
+---
+```
