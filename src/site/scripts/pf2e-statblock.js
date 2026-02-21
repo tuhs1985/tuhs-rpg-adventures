@@ -25,31 +25,53 @@
       .replace(/\s+/g, "-");
   }
 
-function convertWikiLinksToHtml(md) {
-  return md.replaceAll(/\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]/g, (_m, page, alias) => {
-    const text = (alias || page).trim();
+  function convertWikiLinksToHtml(md, linkMap) {
+    return md.replaceAll(/\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]/g, (_m, page, alias) => {
+      const display = (alias || page).trim();
 
-    const [pathPart, hashPart] = page.trim().split("#");
-    const anchor = hashPart ? `#${slugifyForDG(hashPart)}` : "";
+      const [pathPart, hashPart] = page.trim().split("#");
+      const targetTitle = pathPart.split("/").pop().trim(); // title is what DG link text usually is
 
-    // Flat site URLs: use only the note title (last path segment)
-    const last = pathPart
-      .split("/")
-      .map(s => s.trim())
-      .filter(Boolean)
-      .pop();
+      // Prefer DG’s real link if we can find it
+      let href = linkMap?.get(targetTitle) || linkMap?.get(display);
 
-    const slug = slugifyForDG(last);
-    const href = `/${slug}/${anchor}`;
+      // If not found, fall back to a conservative guess (flat) rather than broken folders
+      if (!href) {
+        const slug = slugifyForDG(targetTitle);
+        href = `/${slug}/`;
+      }
 
-    return `<a class="internal-link" href="${href}">${escapeHtml(text)}</a>`;
-  });
-}
+      // Preserve section anchors if present
+      if (hashPart) {
+        const anchor = `#${slugifyForDG(hashPart)}`;
+        href = href.includes("#") ? href : `${href}${anchor}`;
+      }
+
+      return `<a class="internal-link" href="${href}">${escapeHtml(display)}</a>`;
+    });
+  }
   function renderMarkdown(md) {
     if (window.marked && typeof window.marked.parse === "function") {
       return window.marked.parse(md);
     }
     return `<pre><code>${escapeHtml(md)}</code></pre>`;
+  }
+  
+    // Build a map: "Note Title" -> "/real/path/"
+  function buildInternalLinkMap() {
+    const map = new Map();
+
+    // Digital Garden uses internal-link class; also capture any anchor with /.../ hrefs
+    document.querySelectorAll('a.internal-link[href]').forEach(a => {
+      const text = (a.textContent || "").trim();
+      const href = a.getAttribute("href");
+      if (!text || !href) return;
+
+      // Keep first seen to avoid accidental overwrites
+      if (!map.has(text)) map.set(text, href);
+    });
+
+    return map;
   }
 
   const TRAIT_CLASS = new Map([
@@ -92,7 +114,7 @@ function convertWikiLinksToHtml(md) {
     if (!pre) return;
 
     let raw = codeEl.textContent ?? "";
-    raw = convertWikiLinksToHtml(raw);
+    raw = convertWikiLinksToHtml(raw, window.__dgLinkMap);
     raw = obsidianMarksToHtml(raw);
     raw = replaceIndentation(raw);
 
@@ -116,6 +138,8 @@ function convertWikiLinksToHtml(md) {
   }
 
   function run() {
+	      window.__dgLinkMap = buildInternalLinkMap();
+		  
     document.querySelectorAll("pre > code").forEach((code) => {
       const cls = code.className || "";
       const isPF2E = cls.includes("language-pf2e-stats") || cls.includes("lang-pf2e-stats");
