@@ -29,18 +29,18 @@ function convertWikiLinksToHtml(md) {
   return md.replaceAll(/\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]/g, (_m, page, alias) => {
     const text = (alias || page).trim();
 
-    // Split off any heading anchor like [[Page#Section]]
     const [pathPart, hashPart] = page.trim().split("#");
     const anchor = hashPart ? `#${slugifyForDG(hashPart)}` : "";
 
-    // Keep folder structure: [[01 - NPCs/Rurik Granitevein]] -> /01-npcs/rurik-granitevein/
-    const segments = pathPart
+    // Flat site URLs: use only the note title (last path segment)
+    const last = pathPart
       .split("/")
       .map(s => s.trim())
       .filter(Boolean)
-      .map(slugifyForDG);
+      .pop();
 
-    const href = `/${segments.join("/")}/${anchor}`; // if you use .html, see note below
+    const slug = slugifyForDG(last);
+    const href = `/${slug}/${anchor}`;
 
     return `<a class="internal-link" href="${href}">${escapeHtml(text)}</a>`;
   });
