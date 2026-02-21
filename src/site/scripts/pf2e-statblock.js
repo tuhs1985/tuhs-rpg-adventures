@@ -15,11 +15,11 @@
   }
 
   // Optional: prevent [[Wiki Links]] from showing as raw brackets after client-side parsing.
-  //function stripWikiLinks(md) {
-  //  md = md.replaceAll(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2"); // [[Page|Alias]] -> Alias
-  //  md = md.replaceAll(/\[\[([^\]]+)\]\]/g, "$1"); // [[Page]] -> Page
-  //  return md;
-  //}
+  function stripWikiLinks(md) {
+    md = md.replaceAll(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2"); // [[Page|Alias]] -> Alias
+    md = md.replaceAll(/\[\[([^\]]+)\]\]/g, "$1"); // [[Page]] -> Page
+    return md;
+  }
 
   function renderMarkdown(md) {
     if (window.marked && typeof window.marked.parse === "function") {
