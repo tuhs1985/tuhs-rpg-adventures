@@ -3,7 +3,6 @@
 ---
 
 ## 1. Adventures
-
 | Name                                                                                                                                    | status   | campaign | APL | XP  | Reward (gp) | regions                               |
 | --------------------------------------------------------------------------------------------------------------------------------------- | -------- | -------- | --- | --- | ----------- | ------------------------------------- |
 | [[02 - Projects/Golarian Globetrotters/00 - Adventures/Stones Beneath the Green/Stones Beneath the Green\|Stones Beneath the Green]] | complete | GGS      | 1   | 160 | 8           | <ul><li>Kyonin Borderlands</li></ul>  |

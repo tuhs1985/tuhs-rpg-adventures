@@ -13,7 +13,7 @@
 
 **Perception** +7  
 
-**Languages** Common, Elven  
+**Languages** Common, Elven
 
 **Skills** Athletics +6, Diplomacy +6, Intimidation +6, Labor Lore +5, Society +5 
 
