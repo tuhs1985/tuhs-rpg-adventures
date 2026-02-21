@@ -14,13 +14,31 @@
     return md.replaceAll(/==(.+?)==/g, "<mark>$1</mark>");
   }
 
-  // Optional: prevent [[Wiki Links]] from showing as raw brackets after client-side parsing.
-  function stripWikiLinks(md) {
-    md = md.replaceAll(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2"); // [[Page|Alias]] -> Alias
-    md = md.replaceAll(/\[\[([^\]]+)\]\]/g, "$1"); // [[Page]] -> Page
-    return md;
+  // Convert Obsidian [[Wiki Links]] into real links on the published site.
+  // Assumes your DG pages use pretty URLs like /rurik-granitevein/
+  function slugifyForDG(name) {
+    return (name || "")
+      .trim()
+      .toLowerCase()
+      .replace(/['"]/g, "")
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-");
   }
 
+  function convertWikiLinksToHtml(md) {
+    return md.replaceAll(/\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]/g, (_m, page, alias) => {
+      const text = (alias || page).trim();
+      const target = page.trim();
+
+      // Handle folder links like [[01 - NPCs/Rurik Granitevein]]
+      const last = target.split("/").pop();
+
+      const slug = slugifyForDG(last);
+      const href = `/${slug}/`; // if your site uses .html, change to `/${slug}.html`
+
+      return `<a class="internal-link" href="${href}">${escapeHtml(text)}</a>`;
+    });
+  }
   function renderMarkdown(md) {
     if (window.marked && typeof window.marked.parse === "function") {
       return window.marked.parse(md);
@@ -68,7 +86,7 @@
     if (!pre) return;
 
     let raw = codeEl.textContent ?? "";
-    raw = stripWikiLinks(raw);
+    raw = convertWikiLinksToHtml(raw);
     raw = obsidianMarksToHtml(raw);
     raw = replaceIndentation(raw);
 
