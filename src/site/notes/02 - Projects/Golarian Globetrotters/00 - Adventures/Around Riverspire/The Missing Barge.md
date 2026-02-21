@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/00-adventures/around-riverspire/the-missing-barge/","tags":["adventure"],"dgShowToc":true}
+{"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/00-adventures/around-riverspire/the-missing-barge/","tags":["adventure"]}
 ---
 
 ```pf2e-stats
