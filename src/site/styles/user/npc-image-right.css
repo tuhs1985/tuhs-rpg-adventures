@@ -1,4 +1,4 @@
-.markdown-preview-view img[alt="npc-portrait-right"] {
+.pf2e-statblock img.npc-portrait-right {
   float: right !important;
   max-width: 30% !important;
   height: auto !important;

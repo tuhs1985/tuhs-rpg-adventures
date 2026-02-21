@@ -39,6 +39,13 @@
     return md;
   }
 
+  // Convert Obsidian image syntax with classes: ![image.png|class](url) ? ![image.png](url){.class}
+  function convertObsidianImageClasses(md) {
+    return md.replaceAll(/!\[([^\]|]+)\|([^\]]+)\]\(([^)]+)\)/g, (match, filename, className, url) => {
+      return `![${filename}](${url}){.${className.trim()}}`;
+    });
+  }
+
   function renderMarkdown(md) {
     if (window.marked && typeof window.marked.parse === "function") {
       return window.marked.parse(md);
@@ -87,6 +94,7 @@
 
     let raw = codeEl.textContent ?? "";
     raw = convertWikiLinksToMarkdown(raw);
+    raw = convertObsidianImageClasses(raw);
     raw = obsidianMarksToHtml(raw);
     raw = replaceIndentation(raw);
 
@@ -104,6 +112,18 @@
     wrapper.querySelectorAll("code").forEach((c) => {
       const t = c.textContent ?? "";
       if (t.startsWith("[") && t.endsWith("]")) c.classList.add("action-icon");
+    });
+
+    // Apply classes from {.classname} syntax to images
+    wrapper.querySelectorAll("img").forEach((img) => {
+      const parent = img.parentElement;
+      if (parent && parent.textContent.includes("{.")) {
+        const match = parent.innerHTML.match(/\{\.([^}]+)\}/);
+        if (match) {
+          img.classList.add(match[1]);
+          parent.innerHTML = parent.innerHTML.replace(/\{\.([^}]+)\}/, "");
+        }
+      }
     });
 
     pre.replaceWith(wrapper);
