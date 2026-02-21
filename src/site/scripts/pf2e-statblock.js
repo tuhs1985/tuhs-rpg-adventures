@@ -161,24 +161,46 @@ function buildInternalLinkMap() {
     pre.replaceWith(wrapper);
   }
 
-  function run() {
-	      window.__dgLinkMap = buildInternalLinkMap();
-		  
-    document.querySelectorAll("pre > code").forEach((code) => {
-      const cls = code.className || "";
-      const isPF2E = cls.includes("language-pf2e-stats") || cls.includes("lang-pf2e-stats");
-      const isSF2E = cls.includes("language-sf2e-stats") || cls.includes("lang-sf2e-stats");
-      if (isPF2E) transformStatblockCodeBlock(code, false);
-      if (isSF2E) transformStatblockCodeBlock(code, true);
-    });
-	console.log("DG link map sample keys:", Array.from(window.__dgLinkMap.keys()).slice(0, 25));
-console.log("DG link map for 'Rurik Granitevein':", window.__dgLinkMap.get("Rurik Granitevein"));
-console.log("DG link map for 'rurik-granitevein':", window.__dgLinkMap.get("rurik-granitevein"));
-  }
+function runOnce() {
+  window.__dgLinkMap = buildInternalLinkMap();
+  // If DG hasn't created internal links yet, map will be empty
+  if (window.__dgLinkMap.size === 0) return false;
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", run);
-  } else {
-    run();
-  }
+  document.querySelectorAll("pre > code").forEach((code) => {
+    const cls = code.className || "";
+    const isPF2E = cls.includes("language-pf2e-stats") || cls.includes("lang-pf2e-stats");
+    const isSF2E = cls.includes("language-sf2e-stats") || cls.includes("lang-sf2e-stats");
+    if (isPF2E) transformStatblockCodeBlock(code, false);
+    if (isSF2E) transformStatblockCodeBlock(code, true);
+  });
+
+  return true;
+}
+
+function runWithRetries() {
+  // Try immediately, then retry a few times to allow DG to finish wiring links
+  let tries = 0;
+  const maxTries = 20;   // ~2 seconds total
+  const intervalMs = 100;
+
+  const tick = () => {
+    tries++;
+    if (runOnce()) return;
+    if (tries >= maxTries) {
+      // Fall back: still render statblocks, but links will use the flat slug fallback
+      window.__dgLinkMap = new Map();
+      runOnce();
+      return;
+    }
+    setTimeout(tick, intervalMs);
+  };
+
+  tick();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", runWithRetries);
+} else {
+  runWithRetries();
+}
 })();
