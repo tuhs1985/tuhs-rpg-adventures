@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/05-encounter-library/river-trail-ambush/","tags":["encounter"]}
 ---
 
-```pf2e-stats
+pf2e-stats
 # River Trail Ambush
 ## Encounter 1 (Moderate)
 
@@ -41,4 +41,4 @@ As the group approaches the fallen tree, movement in the reeds reveals an ambush
 
 **Victory Conditions**  
 - Ambushers routed or captured; clues on the bodies point upriver to the wreck site.  
-```
+

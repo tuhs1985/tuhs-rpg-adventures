@@ -3,7 +3,7 @@
 ---
 
 
-```pf2e-stats
+pf2e-stats
 # Assess the Claim
 ## Victory Point Subsystem (Moderate)
 
