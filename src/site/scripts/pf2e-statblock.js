@@ -14,89 +14,19 @@
     return md.replaceAll(/==(.+?)==/g, "<mark>$1</mark>");
   }
 
-  // Convert Obsidian [[Wiki Links]] into real links on the published site.
-  // Assumes your DG pages use pretty URLs like /rurik-granitevein/
-  function slugifyForDG(name) {
-    return (name || "")
-      .trim()
-      .toLowerCase()
-      .replace(/['"]/g, "")
-      .replace(/[^a-z0-9\s-]/g, "")
-      .replace(/\s+/g, "-");
+  // Optional: prevent [[Wiki Links]] from showing as raw brackets after client-side parsing.
+  function stripWikiLinks(md) {
+    md = md.replaceAll(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2"); // [[Page|Alias]] -> Alias
+    md = md.replaceAll(/\[\[([^\]]+)\]\]/g, "$1"); // [[Page]] -> Page
+    return md;
   }
 
-  function convertWikiLinksToHtml(md, linkMap) {
-    return md.replaceAll(/\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]/g, (_m, page, alias) => {
-      const display = (alias || page).trim();
-
-      const [pathPart, hashPart] = page.trim().split("#");
-      const targetTitle = pathPart.split("/").pop().trim(); // title is what DG link text usually is
-
-      // Prefer DG’s real link if we can find it
-const key1 = targetTitle.trim();
-const key2 = display.trim();
-const key3 = slugifyForDG(targetTitle); // in case map stored slug keys
-
-let href = linkMap?.get(key1) || linkMap?.get(key2) || linkMap?.get(key3);
-
-      // If not found, fall back to a conservative guess (flat) rather than broken folders
-      if (!href) {
-        const slug = slugifyForDG(targetTitle);
-        href = `/${slug}/`;
-      }
-
-      // Preserve section anchors if present
-      if (hashPart) {
-        const anchor = `#${slugifyForDG(hashPart)}`;
-        href = href.includes("#") ? href : `${href}${anchor}`;
-      }
-
-      return `<a class="internal-link" href="${href}">${escapeHtml(display)}</a>`;
-    });
-  }
   function renderMarkdown(md) {
     if (window.marked && typeof window.marked.parse === "function") {
       return window.marked.parse(md);
     }
     return `<pre><code>${escapeHtml(md)}</code></pre>`;
   }
-  
-    // Build a map: "Note Title" -> "/real/path/"
-function normalizeTitle(s) {
-  return (s || "")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function buildInternalLinkMap() {
-  const map = new Map();
-
-  document.querySelectorAll('a.internal-link[href]').forEach(a => {
-    const href = a.getAttribute("href");
-    if (!href) return;
-
-    // Prefer the title from Obsidian/DG attributes when present
-    const dataHref = a.getAttribute("data-href");      // sometimes exists
-    const aria = a.getAttribute("aria-label");         // sometimes exists
-    const titleAttr = a.getAttribute("title");         // sometimes exists
-    const text = normalizeTitle(a.textContent);
-
-    // Store multiple keys that might match what the wikilink contains
-    const candidates = [dataHref, aria, titleAttr, text]
-      .filter(Boolean)
-      .map(normalizeTitle);
-
-    candidates.forEach(k => {
-      if (!map.has(k)) map.set(k, href);
-    });
-
-    // Also store the last path segment of the href itself as a key, e.g. "rurik-granitevein"
-    const m = href.match(/\/([^\/#]+)\/?$/);
-    if (m && m[1] && !map.has(m[1])) map.set(m[1], href);
-  });
-
-  return map;
-}
 
   const TRAIT_CLASS = new Map([
     ["tiny", "pf2e-statblock-trait-size"],
@@ -138,7 +68,7 @@ function buildInternalLinkMap() {
     if (!pre) return;
 
     let raw = codeEl.textContent ?? "";
-    raw = convertWikiLinksToHtml(raw, window.__dgLinkMap);
+    raw = stripWikiLinks(raw);
     raw = obsidianMarksToHtml(raw);
     raw = replaceIndentation(raw);
 
@@ -161,46 +91,19 @@ function buildInternalLinkMap() {
     pre.replaceWith(wrapper);
   }
 
-function runOnce() {
-  window.__dgLinkMap = buildInternalLinkMap();
-  // If DG hasn't created internal links yet, map will be empty
-  if (window.__dgLinkMap.size === 0) return false;
+  function run() {
+    document.querySelectorAll("pre > code").forEach((code) => {
+      const cls = code.className || "";
+      const isPF2E = cls.includes("language-pf2e-stats") || cls.includes("lang-pf2e-stats");
+      const isSF2E = cls.includes("language-sf2e-stats") || cls.includes("lang-sf2e-stats");
+      if (isPF2E) transformStatblockCodeBlock(code, false);
+      if (isSF2E) transformStatblockCodeBlock(code, true);
+    });
+  }
 
-  document.querySelectorAll("pre > code").forEach((code) => {
-    const cls = code.className || "";
-    const isPF2E = cls.includes("language-pf2e-stats") || cls.includes("lang-pf2e-stats");
-    const isSF2E = cls.includes("language-sf2e-stats") || cls.includes("lang-sf2e-stats");
-    if (isPF2E) transformStatblockCodeBlock(code, false);
-    if (isSF2E) transformStatblockCodeBlock(code, true);
-  });
-
-  return true;
-}
-
-function runWithRetries() {
-  // Try immediately, then retry a few times to allow DG to finish wiring links
-  let tries = 0;
-  const maxTries = 20;   // ~2 seconds total
-  const intervalMs = 100;
-
-  const tick = () => {
-    tries++;
-    if (runOnce()) return;
-    if (tries >= maxTries) {
-      // Fall back: still render statblocks, but links will use the flat slug fallback
-      window.__dgLinkMap = new Map();
-      runOnce();
-      return;
-    }
-    setTimeout(tick, intervalMs);
-  };
-
-  tick();
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", runWithRetries);
-} else {
-  runWithRetries();
-}
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", run);
+  } else {
+    run();
+  }
 })();
