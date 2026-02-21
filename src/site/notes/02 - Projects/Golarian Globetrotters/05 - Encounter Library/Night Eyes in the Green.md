@@ -3,7 +3,7 @@
 ---
 
 
-pf2e-stats
+```pf2e-stats
 # Night Eyes in the Green
 ## Encounter 1 (Moderate)
 
