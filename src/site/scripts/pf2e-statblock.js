@@ -14,10 +14,28 @@
     return md.replaceAll(/==(.+?)==/g, "<mark>$1</mark>");
   }
 
-  // Optional: prevent [[Wiki Links]] from showing as raw brackets after client-side parsing.
-  function stripWikiLinks(md) {
-    md = md.replaceAll(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2"); // [[Page|Alias]] -> Alias
-    md = md.replaceAll(/\[\[([^\]]+)\]\]/g, "$1"); // [[Page]] -> Page
+  // Convert Obsidian wikilinks to markdown links using the global link map
+  function convertWikiLinksToMarkdown(md) {
+    const linkMap = window.WIKILINK_MAP || {};
+
+    // Handle [[Page|Alias]] format
+    md = md.replaceAll(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, (match, page, alias) => {
+      const pageName = page.trim();
+      const lookupKey = pageName.toLowerCase();
+      const url = linkMap[lookupKey] || `/404`;
+
+      return `[${alias}](${url})`;
+    });
+
+    // Handle [[Page]] format
+    md = md.replaceAll(/\[\[([^\]]+)\]\]/g, (match, page) => {
+      const pageName = page.trim();
+      const lookupKey = pageName.toLowerCase();
+      const url = linkMap[lookupKey] || `/404`;
+
+      return `[${pageName}](${url})`;
+    });
+
     return md;
   }
 
@@ -68,7 +86,7 @@
     if (!pre) return;
 
     let raw = codeEl.textContent ?? "";
-    raw = stripWikiLinks(raw);
+    raw = convertWikiLinksToMarkdown(raw);
     raw = obsidianMarksToHtml(raw);
     raw = replaceIndentation(raw);
 
