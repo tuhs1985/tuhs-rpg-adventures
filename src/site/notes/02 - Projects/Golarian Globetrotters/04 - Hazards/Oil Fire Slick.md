@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/04-hazards/oil-fire-slick/","tags":["hazard"]}
 ---
 
-```pf2e-stats
+pf2e-stats
 # Oil Fire Slick
 ## Complex Hazard -1
 
@@ -42,4 +42,4 @@ If new oil leaks from barrels, the hazard reforms in 10 minutes.
 **Notes**  
 - Treat each patch as a 5-foot hazard space; 4–6 patches typically cover the causeway.  
 
-```
+
