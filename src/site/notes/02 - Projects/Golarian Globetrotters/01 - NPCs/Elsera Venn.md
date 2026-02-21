@@ -3,7 +3,7 @@
 ---
 
 
-```pf2e-stats
+pf2e-stats
 # Elsera Venn
 ## Creature 1 (Dockmaster)
 

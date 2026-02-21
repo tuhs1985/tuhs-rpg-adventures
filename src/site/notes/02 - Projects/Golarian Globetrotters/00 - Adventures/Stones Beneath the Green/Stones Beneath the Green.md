@@ -3,7 +3,7 @@
 ---
 
 
-```pf2e-stats
+pf2e-stats
 # Stones Beneath the Green
 ## Adventure Overview
 ==Adventure== ==Level 1==
@@ -40,7 +40,7 @@ The mine was left idle years ago for reasons that were never properly documented
 ---
 
 **Notable NPCs**
-- [[Rurik Granitevein]] — wealthy, driven, eager, desperate to legitimize his find.
+- [[02 - Projects/Golarian Globetrotters/01 - NPCs/Rurik Granitevein\|Rurik Granitevein]] — wealthy, driven, eager, desperate to legitimize his find.
 - **The Fey Guardian** — a thinking, territorial embodiment of the wilderness responding to intrusion.
 
 ---
@@ -75,7 +75,7 @@ The mine was left idle years ago for reasons that were never properly documented
 - Regional Random Encounter DC adjustments for future sessions.
 - Establishes site as a future expedition hub.
 - Introduces the Fey as an active, remembering force in the campaign.
-```
+
 
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
 
@@ -83,7 +83,7 @@ The mine was left idle years ago for reasons that were never properly documented
 
 
 
-```pf2e-stats
+pf2e-stats
 # Assess the Claim
 ## Victory Point Subsystem (Moderate)
 
@@ -180,7 +180,7 @@ After four assessment passes (8 hours total), total the Victory Points:
 
 
 
-```pf2e-stats
+pf2e-stats
 # Camp Preparation — Site Defense Readiness
 ## Short Subsystem
 
@@ -302,7 +302,7 @@ These effects apply only to the **next night encounter at this camp** and do not
 
 
 
-```pf2e-stats
+pf2e-stats
 # Night Eyes in the Green
 ## Encounter 1 (Moderate)
 

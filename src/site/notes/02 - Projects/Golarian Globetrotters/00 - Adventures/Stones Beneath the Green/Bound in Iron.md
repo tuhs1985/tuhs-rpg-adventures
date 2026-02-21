@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/02-projects/golarian-globetrotters/00-adventures/stones-beneath-the-green/bound-in-iron/","tags":["adventure"],"dgShowToc":true}
 ---
 
-```pf2e-stats
+pf2e-stats
 # Bound in Iron
 ## Adventure Overview
 ==Adventure== ==Level 1== ==Kyonin Boarderlands==
@@ -38,7 +38,7 @@ After crews are sent to begin reclaiming the abandoned mine, disturbances escala
 ---
 
 **Notable NPCs**
-- **[[Rurik Granitevein]]** — Patron; pressing for stability and continued operation.  
+- **[[02 - Projects/Golarian Globetrotters/01 - NPCs/Rurik Granitevein\|Rurik Granitevein]]** — Patron; pressing for stability and continued operation.  
 - **Mine Foreman (TBD)** — Represents worker morale and practical concerns. 
 
 ---
@@ -67,7 +67,7 @@ After crews are sent to begin reclaiming the abandoned mine, disturbances escala
 - Payment reduced if 2+ workers die.  
 - The ward disturbs something beneath the mine.  
 - Session 3: Reports of underground instability and renewed danger.
-```
+
 
   
 <div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
@@ -75,7 +75,7 @@ After crews are sent to begin reclaiming the abandoned mine, disturbances escala
 
 
 
-```pf2e-stats
+pf2e-stats
 # Warning from the Green
 ## Encounter 2 (Severe)
 
@@ -182,7 +182,7 @@ Workers flee. Equipment damaged. Mine entrance temporarily unsafe.
 
 
 
-```pf2e-stats
+pf2e-stats
 # Warding the Claim
 ## Victory Point Subsystem (Moderate)
 
