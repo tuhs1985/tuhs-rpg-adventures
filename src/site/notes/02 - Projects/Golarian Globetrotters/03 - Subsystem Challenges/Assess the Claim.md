@@ -89,3 +89,6 @@ After four assessment passes (8 hours total), total the Victory Points:
   - The assessment is inconclusive or troubling, yet the prospector may still push ahead out of stubbornness or sunk cost.  
   - **Payout:** Half reward, 9 gp total, paid grudgingly.  
   - **Future Random Encounters:** The region is now volatile and hazardous; **Random Encounter flat check DC becomes 10** (encounters significantly more likely).
+
+---
+```

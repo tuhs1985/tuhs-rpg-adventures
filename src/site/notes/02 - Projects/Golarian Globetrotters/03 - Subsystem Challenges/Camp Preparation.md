@@ -114,3 +114,6 @@ If a **night encounter occurs at this camp**, apply:
   - On **Critical Failure:** the attempt offends the land or its spirits; the enemy gains **+1 to their first attack roll**.
 
 These effects apply only to the **next night encounter at this camp** and do not persist beyond it.
+
+---
+```

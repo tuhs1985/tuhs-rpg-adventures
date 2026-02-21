@@ -69,3 +69,6 @@ The wolves stalk first and strike when they think they have advantage.
 **Environmental Variant:**  
 - Rain or slick stone increases footing difficulty  
   - Acrobatics DCs **+2** when moving quickly
+
+---
+```
