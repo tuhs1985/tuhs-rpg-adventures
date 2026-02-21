@@ -1,0 +1,8 @@
+.markdown-preview-view img[alt="npc-portrait-right"] {
+  float: right !important;
+  max-width: 30% !important;
+  height: auto !important;
+  margin: 0 0 0.75rem 0.75rem !important;
+  display: block !important;
+}
+

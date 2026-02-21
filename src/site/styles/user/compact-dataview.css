@@ -1,0 +1,15 @@
+.dataview {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.dataview.list-view-ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.markdown-preview-view h3 {
+  margin-bottom: 0.2em;
+}
