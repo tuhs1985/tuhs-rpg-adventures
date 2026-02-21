@@ -25,20 +25,26 @@
       .replace(/\s+/g, "-");
   }
 
-  function convertWikiLinksToHtml(md) {
-    return md.replaceAll(/\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]/g, (_m, page, alias) => {
-      const text = (alias || page).trim();
-      const target = page.trim();
+function convertWikiLinksToHtml(md) {
+  return md.replaceAll(/\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]/g, (_m, page, alias) => {
+    const text = (alias || page).trim();
 
-      // Handle folder links like [[01 - NPCs/Rurik Granitevein]]
-      const last = target.split("/").pop();
+    // Split off any heading anchor like [[Page#Section]]
+    const [pathPart, hashPart] = page.trim().split("#");
+    const anchor = hashPart ? `#${slugifyForDG(hashPart)}` : "";
 
-      const slug = slugifyForDG(last);
-      const href = `/${slug}/`; // if your site uses .html, change to `/${slug}.html`
+    // Keep folder structure: [[01 - NPCs/Rurik Granitevein]] -> /01-npcs/rurik-granitevein/
+    const segments = pathPart
+      .split("/")
+      .map(s => s.trim())
+      .filter(Boolean)
+      .map(slugifyForDG);
 
-      return `<a class="internal-link" href="${href}">${escapeHtml(text)}</a>`;
-    });
-  }
+    const href = `/${segments.join("/")}/${anchor}`; // if you use .html, see note below
+
+    return `<a class="internal-link" href="${href}">${escapeHtml(text)}</a>`;
+  });
+}
   function renderMarkdown(md) {
     if (window.marked && typeof window.marked.parse === "function") {
       return window.marked.parse(md);
