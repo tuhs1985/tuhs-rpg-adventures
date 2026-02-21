@@ -14,11 +14,84 @@
     return md.replaceAll(/==(.+?)==/g, "<mark>$1</mark>");
   }
 
-  // Optional: prevent [[Wiki Links]] from showing as raw brackets after client-side parsing.
-  function stripWikiLinks(md) {
-    md = md.replaceAll(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2"); // [[Page|Alias]] -> Alias
-    md = md.replaceAll(/\[\[([^\]]+)\]\]/g, "$1"); // [[Page]] -> Page
+  // Convert [[Wiki Links]] to markdown links with temporary anchors
+  function wikiLinksToMarkdown(md) {
+    // [[Folder/Page|Alias]] or [[Page|Alias]] → [Alias](#wl:Page)
+    md = md.replaceAll(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, (match, target, alias) => {
+      return `[${alias}](#wl:${encodeURIComponent(target.trim())})`;
+    });
+    // [[Page]] or [[Folder/Page]] → [Page](#wl:Page)
+    md = md.replaceAll(/\[\[([^\]]+)\]\]/g, (match, target) => {
+      const trimmed = target.trim();
+      const display = trimmed.includes("/") ? trimmed.split("/").pop() : trimmed;
+      return `[${display}](#wl:${encodeURIComponent(trimmed)})`;
+    });
     return md;
+  }
+
+  // Build a map of note names/slugs to their actual URLs by scanning existing links
+  function buildLinkMap() {
+    const map = new Map();
+    document.querySelectorAll("a[href]").forEach((link) => {
+      const href = link.getAttribute("href");
+      if (!href || href.startsWith("#") || href.startsWith("http")) return;
+
+      const text = (link.textContent || "").trim();
+      if (!text) return;
+
+      // Store by exact link text (case-insensitive)
+      map.set(text.toLowerCase(), href);
+
+      // Extract the final segment of the URL path for additional matching
+      const pathMatch = href.match(/\/([^\/]+)\/?$/);
+      if (pathMatch && pathMatch[1]) {
+        const segment = pathMatch[1];
+        map.set(segment.toLowerCase(), href);
+        // Also store segment with dashes converted to spaces
+        const segmentAsTitle = segment.replace(/-/g, " ");
+        map.set(segmentAsTitle.toLowerCase(), href);
+      }
+    });
+    return map;
+  }
+
+  // Resolve temporary #wl: links to actual URLs
+  function resolveWikiLinks(wrapper, linkMap) {
+    wrapper.querySelectorAll("a[href^='#wl:']").forEach((link) => {
+      const encoded = link.getAttribute("href").substring(4); // Remove "#wl:"
+      const target = decodeURIComponent(encoded);
+
+      let realHref = null;
+
+      // Try exact match (case-insensitive)
+      realHref = linkMap.get(target.toLowerCase());
+
+      // Try just the page name (strip folder path)
+      if (!realHref && target.includes("/")) {
+        const pageName = target.split("/").pop();
+        realHref = linkMap.get(pageName.toLowerCase());
+      }
+
+      // Try converting to URL slug
+      if (!realHref) {
+        const slug = target.toLowerCase()
+          .replace(/[^a-z0-9\/]+/g, "-")
+          .replace(/^-|-$/g, "")
+          .split("/").pop();
+        realHref = linkMap.get(slug);
+      }
+
+      if (realHref) {
+        link.setAttribute("href", realHref);
+      } else {
+        // Fallback: create naive slug-based link
+        const slug = target.toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "");
+        link.setAttribute("href", `/${slug}/`);
+        link.classList.add("wl-unresolved");
+      }
+    });
   }
 
   function renderMarkdown(md) {
