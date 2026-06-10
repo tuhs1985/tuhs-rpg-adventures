@@ -145,7 +145,10 @@ Critical Failure: The fey is Frightened 1.
 - 0–1 Dead: Full reward  
 - 2–3 Dead: 50% reward  
 - 4+ Dead: No reward
-  
+ 
+**Help the Miners** `[two-actions]`
+Players may make a medicine check (DC 15) to remove an injury from a miner
+ 
 ---  
   
 **Development**  
