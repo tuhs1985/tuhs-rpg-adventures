@@ -30,25 +30,15 @@ As the party investigates, movement can be heard below deck. Moments later, the 
 
 ---
 
-**Initiative**
-- Creatures use **Perception** for initiative.
-- Wave 1 appears once the party boards the vessel or begins searching the deck.
-- Wave 2 emerges from below deck at the start of Round 3.
-- Wave 3 breaks through a locked hatch or cargo partition at the start of Round 5.
-
----
-
 **Terrain & Features**
 - **River Dock:** 10-foot-wide wooden dock. Falling into the river requires 1 action to Swim to safety.
 - **Fog:** Creatures more than 30 feet away are Concealed.
-- **Gangplank:** Narrow approach to the vessel; creatures cannot move through occupied spaces.
 - **Cargo Crates:** Provide standard cover.
-- **Below Deck:** Tight quarters with narrow passages that limit movement and lines of sight.
 
 ---
 
 **Tactics**
-- The zombie hounds rush the nearest living creature and attempt to force opponents off the gangplank or away from the vessel.
+- The zombie hounds rush the nearest living creature and attempt to force opponents away from the vessel.
 - The shamblers advance relentlessly toward the largest concentration of targets.
 - The plague zombie remains below deck until released, then focuses on the nearest creature and presses the attack without regard for its own safety.
 - None of the undead retreat.
@@ -59,7 +49,6 @@ As the party investigates, movement can be heard below deck. Moments later, the 
 - The vessel contains no surviving crew.
 - Waterlogged cargo and ruined paperwork suggest the barge has been adrift for some time.
 - A damaged shipping manifest indicates the vessel originated somewhere far upriver, though its final destination is unreadable.
-- News of the attack spreads through Riverspire, lending credibility to rumors of unusual activity along the river.
 
 ---
 
