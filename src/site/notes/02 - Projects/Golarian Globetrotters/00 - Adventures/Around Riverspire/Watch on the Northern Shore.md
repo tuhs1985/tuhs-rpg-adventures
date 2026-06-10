@@ -6,7 +6,7 @@
 # Watch on the Northern Shore
 ## Adventure Overview
 ==Adventure== ==Level 1== ==Riverspire== ==City Watch== ==Undead==
-**Party Level** 1 **Total XP Award** 80 **Total Treasure (Gold Only)** x gp
+**Party Level** 1 **Total XP Award** 80 **Total Treasure (Gold Only)** 5 gp
 
 --- 
 
