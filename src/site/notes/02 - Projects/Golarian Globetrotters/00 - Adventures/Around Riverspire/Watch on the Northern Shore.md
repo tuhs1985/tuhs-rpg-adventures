@@ -30,7 +30,7 @@ Investigation reveals the barge is carrying far more than abandoned cargo.
 1. **Northbank Post** — Exploration, 30 xp  
 Inspect the watch station, read previous watch logs, and prepare for the night.
 
-	a. First Entry Excerpt
+a. **First Entry Excerpt**
 >**5 Sarenith, 4726 AR**
 >​
 >
@@ -48,7 +48,7 @@ Inspect the watch station, read previous watch logs, and prepare for the night.
 >
 > Recommend assigning a second watchman to future shifts. 
 
-	b. Second Entry Excerpt
+b. **Second Entry Excerpt**
 > **10 Sarenith, 4726 AR**
 >​
 >
@@ -78,41 +78,42 @@ Inspect the watch station, read previous watch logs, and prepare for the night.
 >
 > Recommend Northbank Post remain staffed by no fewer than two watchmen. Recommend any future bites or injuries sustained at this post be examined by a physician without delay.  
 
-	c. Watchstation Inspection
-		- Deep gouges into the dock pilings 1-2 feet above waterline (DC 15 Perception)
-		- Fish carcases washed ashore with strange bites (DC 15 Survival)
-		- A length of rope hangs from one piling, tied into a crude knot above the waterline (DC 14 Salor Lore, DC 16 Perception)
-			- On a success, the rope appears to have been tied from the water side rather than from the dock.
+c. **Watchstation Inspection**
+- Deep gouges into the dock pilings 1-2 feet above waterline (DC 15 Perception)
+- Fish carcases washed ashore with strange bites (DC 15 Survival)
+- A length of rope hangs from one piling, tied into a crude knot above the waterline (DC 14 Salor Lore, DC 16 Perception)
+- On a success, the rope appears to have been tied from the water side rather than from the dock.
 
 2. **The River Delivers** — Exploration, 30 xp
 Thick fog settles over the water. An unmanned barge appears and grounds near the dock.
 
-	a. **Inspect Exterior** — DC 15 Perception, DC 15 Crafting, DC 14 Sailing Lore  
-		- Registration identifies the vessel as the *Silver Heron*, a small passenger ferry.  
-		- Deep claw marks score portions of the hull near the waterline.  
-		- Several dried bloody handprints stain the starboard rail.  
-		- No signs of collision or storm damage.  
+a. **Inspect Exterior** — DC 15 Perception, DC 15 Crafting, DC 14 Sailing Lore  
+- Registration identifies the vessel as the *Silver Heron*, a small passenger ferry.  
+- Deep claw marks score portions of the hull near the waterline.  
+- Several dried bloody handprints stain the starboard rail.  
+- No signs of collision or storm damage.  
   
-	b. **Search the Deck** — DC 15 Perception, Medicine, Society  
-		- Personal belongings are scattered across the deck.  
-		- A half-finished meal remains on a small table.  
-		- Several travel packs appear abandoned.  
-		- Bloodstains are present, though not in sufficient quantity to explain the disappearance of the crew and passengers.  
-		- The passenger manifest lists four crew and eleven passengers.  
+b. **Search the Deck** — DC 15 Perception, Medicine, Society  
+- Personal belongings are scattered across the deck.  
+- A half-finished meal remains on a small table.  
+- Several travel packs appear abandoned.  
+- Bloodstains are present, though not in sufficient quantity to explain the disappearance of the crew and passengers.  
+- The passenger manifest lists four crew and eleven passengers.  
   
-	c. **Recall Knowledge** — DC 14 Sailing Lore, DC 15 Medicine, DC 15  Survival  
-		- **Sailing Lore:** The vessel could not have drifted to Riverspire unattended. The river current flows south from the mountains. Something brought it here.  
-		- **Medicine:** The blood is several days old.  
-		- **Survival:** Tracks on the deck belong to both humanoids and canines.  
-		- **Society:** The *Silver Heron* normally operates much farther north along the river.  
+c. **Recall Knowledge** — DC 14 Sailing Lore, DC 15 Medicine, DC 15  Survival  
+- **Sailing Lore:** The vessel could not have drifted to Riverspire unattended. The river current flows south from the mountains. Something brought it here.  
+- **Medicine:** The blood is several days old.  
+- **Survival:** Tracks on the deck belong to both humanoids and canines. 
+- **Society:** The *Silver Heron* normally operates much farther north along the river.  
   
-	d. **Growing Unease**  
-		- A heavy thump echoes from below deck.  
-		- Several loose items shift despite the vessel sitting motionless.  
-		- Something scratches briefly against the underside of the deck.  
-		- Moments later, the noises stop.
+d. **Growing Unease**  
+- A heavy thump echoes from below deck.  
+- Several loose items shift despite the vessel sitting motionless.  
+- Something scratches briefly against the underside of the deck.  
+- Moments later, the noises stop.
   
-3. **The Dead Aboard** — Combat, 110 XP  
+3. **The Dead Aboard** — Combat, 110 XP 
+   
 Wave encounter aboard the barge and around the dock.  
 - Wave 1: 2 Weak Zombie Hounds (30 XP)   
 - Wave 2: 2 Zombie Shamblers (40 XP) 
