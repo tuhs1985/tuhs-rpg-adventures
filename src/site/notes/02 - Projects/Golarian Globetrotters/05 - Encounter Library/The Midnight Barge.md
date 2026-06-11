@@ -9,7 +9,7 @@
 
 ==Encounter== ==Severe== ==Riverspire== ==Undead== ==City Watch==
 
-**Party Level** 1 **XP Budget** 110 **Treasure (Gold Only)** 9 gp
+**Party Level** 1 **XP Budget** 110 **Treasure (Gold Only)** 5 gp
 
 ---
 
