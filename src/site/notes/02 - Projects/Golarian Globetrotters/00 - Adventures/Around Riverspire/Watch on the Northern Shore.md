@@ -31,52 +31,41 @@ Investigation reveals the barge is carrying far more than abandoned cargo.
 Inspect the watch station, read previous watch logs, and prepare for the night.
 
 a. **First Entry Excerpt**
+>
 >**5 Sarenith, 4726 AR**
->​
 >
 >Quiet watch. No traffic after sundown.
->​
 >
 >Fog rolled in from the north around midnight. Wind should have pushed it downstream but it lingered along the shoreline.
->​
 >
 >Heard scratching beneath the dock twice during the night. Found nothing when investigated.
->​
 >
 > Saw a light on the river north of the post. Could not find it again after retrieving the spyglass.
->​
->
+> 
 > Recommend assigning a second watchman to future shifts. 
 
 b. **Second Entry Excerpt**
+> 
 > **10 Sarenith, 4726 AR**
->​
->
+> 
 > Assigned watch with Guardsman Tovin per prior recommendation.
->​
->
+> 
 > Fog returned shortly before midnight. Again remained fixed along the northern shoreline despite steady wind.
->​
->
+> 
 > Heard movement beneath the dock at approximately the second bell. Tovin investigated while I remained in the tower.
->​
->
+> 
 > Several moments later I heard shouting from the shoreline. Reached Tovin near the water's edge. He reported being bitten by an animal that fled into the fog. Could not identify the creature.
->​
->
+> 
 > Wound appeared unusually severe for the size described. Cleaned and bandaged immediately.
->​
->
+> 
 > Within an hour the flesh surrounding the bite had become swollen, discolored, and hot to the touch. Tovin complained of chills despite the warm night and nearly collapsed while climbing the tower stairs.
->​
->
+> 
 > At approximately the third bell, observed a lantern moving north to south along the river. No vessel visible.
->​
->
+> 
 > Determined Tovin required immediate medical attention. Abandoned the remainder of the watch and returned to Riverspire before dawn.
->​
->
-> Recommend Northbank Post remain staffed by no fewer than two watchmen. Recommend any future bites or injuries sustained at this post be examined by a physician without delay.  
+> 
+> Recommend Northbank Post remain staffed by no fewer than two watchmen. Recommend any future bites or injuries sustained at this post be examined by a physician without delay.
+> 
 
 c. **Watchstation Inspection**
 - Deep gouges into the dock pilings 1-2 feet above waterline (DC 15 Perception)
@@ -135,12 +124,11 @@ None. The contract is issued through the Riverspire Watch office.
 
 **Posting on the Job Board**  
 > **CITY WATCH AUXILIARIES NEEDED**  
->  
+> 
 > Northbank Post requires temporary auxiliaries for a routine overnight assignment.  
->  
+> 
 > Duties include monitoring river traffic, maintaining the signal brazier, and reporting suspicious activity.  
->  
->  
+> 
 > Shift begins at dusk. Payment upon return.
 
 ---  
