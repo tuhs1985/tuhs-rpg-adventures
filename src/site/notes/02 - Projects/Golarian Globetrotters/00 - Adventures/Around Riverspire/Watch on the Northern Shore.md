@@ -6,7 +6,7 @@
 # Watch on the Northern Shore
 ## Adventure Overview
 ==Adventure== ==Level 1== ==Riverspire== ==City Watch== ==Undead==
-**Party Level** 1 **Total XP Award** 80 **Total Treasure (Gold Only)** 7.5-9 gp
+**Party Level** 1 **Total XP Award** 170-200 **Total Treasure (Gold Only)** 7.5-9 gp
 
 --- 
 
@@ -31,7 +31,7 @@ Investigation reveals the barge is carrying far more than abandoned cargo.
 Inspect the watch station, read previous watch logs, and prepare for the night.
 
 	a. First Entry Excerpt
->5 Sarenith, 4726 AR
+>**5 Sarenith, 4726 AR**
 >​
 >
 >Quiet watch. No traffic after sundown.
@@ -49,7 +49,7 @@ Inspect the watch station, read previous watch logs, and prepare for the night.
 > Recommend assigning a second watchman to future shifts. 
 
 	b. Second Entry Excerpt
-> 10 Sarenith, 4726 AR
+> **10 Sarenith, 4726 AR**
 >​
 >
 > Assigned watch with Guardsman Tovin per prior recommendation.
