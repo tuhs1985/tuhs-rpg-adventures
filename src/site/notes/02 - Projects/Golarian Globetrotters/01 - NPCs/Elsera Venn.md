@@ -7,7 +7,7 @@
 # Elsera Venn
 ## Creature 1 (Dockmaster)
 
-==MEDIUM== ==Elf== ==Humanoid== <!-- Portrait -->![[elsera-venn-dockmaster-portrait.pngx|npc-portrait-right]]
+==MEDIUM== ==Elf== ==Humanoid== <!-- Portrait -->![elsera-venn-dockmaster-portrait.png|npc-portrait-right](/img/user/Assets/elsera-venn-dockmaster-portrait.png)
 
 **Source** N/A  
 

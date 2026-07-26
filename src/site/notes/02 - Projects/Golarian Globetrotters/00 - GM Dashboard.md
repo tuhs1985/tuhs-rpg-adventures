@@ -6,9 +6,9 @@
 ## 1. Adventure Pitches
 | Name                                                                                                                                   | status   | campaign | APL | XP  | Reward (gp) | regions                               |
 | -------------------------------------------------------------------------------------------------------------------------------------- | -------- | -------- | --- | --- | ----------- | ------------------------------------- |
+| [[02 - Projects/Golarian Globetrotters/00 - Adventures/Around Riverspire/Watch on the Northern Shore\|Watch on the Northern Shore]] | active   | GGS      | 1   | 200 | 9           | <ul><li>Riverspire</li></ul>          |
 | [[02 - Projects/Golarian Globetrotters/00 - Adventures/Kyonin Boarderlands/Bound in Iron\|Bound in Iron]]                           | complete | GGS      | 1   | 220 | 10          | <ul><li>Kyonin Boarderlands</li></ul> |
 | [[02 - Projects/Golarian Globetrotters/00 - Adventures/Around Riverspire/The Missing Barge\|The Missing Barge]]                     | complete | GGS      | 1   | 240 | 11          | <ul><li>Kyonin River</li></ul>        |
-| [[02 - Projects/Golarian Globetrotters/00 - Adventures/Around Riverspire/Watch on the Northern Shore\|Watch on the Northern Shore]] | pitch    | GGS      | 1   | 200 | 9           | <ul><li>Riverspire</li></ul>          |
 
 { .block-language-dataview}
 

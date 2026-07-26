@@ -33,7 +33,7 @@ Inspect the watch station, read previous watch logs, and prepare for the night.
 
 a. **First Entry Excerpt**
 >
->**5 Sarenith, 4726 AR**
+>**10 Sarenith, 4726 AR**
 >
 >Quiet watch. No traffic after sundown.
 >
@@ -47,7 +47,7 @@ a. **First Entry Excerpt**
 
 b. **Second Entry Excerpt**
 > 
-> **10 Sarenith, 4726 AR**
+> **15 Sarenith, 4726 AR**
 > 
 > Assigned watch with Guardsman Tovin per prior recommendation.
 > 
